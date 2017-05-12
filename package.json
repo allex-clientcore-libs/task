@@ -1,0 +1,25 @@
+{
+  "name": "allex_taskclientcorelib",
+  "version": "1.0.0",
+  "description": "AllexJS Task lib",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allex-clientcore-libs/task.git"
+  },
+  "keywords": [
+    "ecosystem:AllexJS",
+    "client",
+    "task",
+    "lib"
+  ],
+  "author": "Andrija Petrovic <andrija.hers@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allex-clientcore-libs/task/issues"
+  },
+  "homepage": "https://github.com/allex-clientcore-libs/task#readme"
+}
