@@ -5,7 +5,7 @@ function createTask(execlib){
       taskRegistry = execSuite.taskRegistry,
       ResolvableTaskError = execSuite.ResolvableTaskError;
   function TaskConstructionError(missingpropname){
-    var ret = new lib.Error('TASK_CONSTRUCTION_ERROR','Constructor property hash misses the '+missingpropname+' property');
+    var ret = new lib.Error('TASK_CONSTRUCTION_ERROR','Constructor property hash lacks the '+missingpropname+' property');
     ret.missingpropname = missingpropname;
     return ret;
   };
@@ -23,11 +23,7 @@ function createTask(execlib){
       this.log = lib.dummyFunc;
     }
   };
-  Task.prototype.destroy = function(){
-    if(this.hasOwnProperty('log')){
-      this.log = null;
-    }
-  };
+  Task.prototype.destroy = lib.dummyFunc;
   Task.prototype.raiseException = function(e){
     if(!e.code){
       throw new lib.NotAnAllexErrorError(e);

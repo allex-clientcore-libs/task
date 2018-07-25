@@ -1,6 +1,6 @@
 {
   "name": "allex_taskclientcorelib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "AllexJS Task lib",
   "main": "index.js",
   "scripts": {
