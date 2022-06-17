@@ -12,6 +12,13 @@ function createSinkTask(execlib){
   SinkTask.prototype.__cleanUp = function(){
     DestroyableTask.prototype.__cleanUp.call(this);
   };
+  SinkTask.prototype.onAboutToDie = function () {
+    if (this.__dyingException && lib.isFunction(this.onError)) {
+      this.onError(this.__dyingException);
+      this.onError = null;
+    }
+  };
+
   return SinkTask;
 }
 

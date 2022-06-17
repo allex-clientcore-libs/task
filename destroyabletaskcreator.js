@@ -20,8 +20,8 @@ function createDestroyableTask(execlib){
       e.notDestroyable = d;
       throw e;
     }
-    Destroyable.call(this);
     Task.call(this,prophash);
+    Destroyable.call(this);
     this.destroyListener = d.destroyed.attach(this.destroy.bind(this));
   }
   lib.inherit(DestroyableTask,Task);
@@ -32,8 +32,8 @@ function createDestroyableTask(execlib){
     }
     this.destroyListener.destroy();
     this.destroyListener = null;
-    Task.prototype.destroy.call(this);
     Destroyable.prototype.__cleanUp.call(this);
+    Task.prototype.destroy.call(this);
   };
   return DestroyableTask;
 }
